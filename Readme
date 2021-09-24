@@ -1,0 +1,14 @@
+# The .DS_Store files cause a lot of trouble and headache. If you accidently added them into the git, use the following command to find and remove all of them.
+
+> cd "your project folder"
+> find . -name '.DS_Store' -type f -delete
+> git commit -m "Remove .DS_Store file"
+
+# If you're in a team. You would need to remove the xcuserstate files; otherwise, a conflict might occur when merging git branches.
+
+> git rm --cached Musette.xcodeproj/project.xcworkspace/xcuserdata/admin.xcuserdatad/UserInterfaceState.xcuserstate
+> git commit -m "Removed file that shouldn't be tracked"
+
+# Stop merging two branches. It will reset the active branch to the latest commit
+> git reset --hard
+
