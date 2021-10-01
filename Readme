@@ -12,3 +12,6 @@
 # Stop merging two branches. It will reset the active branch to the latest commit
 > git reset --hard
 
+# XCode 13 prompts out an error "The repository is locked" when merging to branches. To fix the problem, you might need to find the index.lock file in the .git folder
+and delete it. If it still does not work, try using the git command line tool to merge the two branches.
+> git merge <<branch name>>
